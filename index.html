@@ -4,19 +4,30 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
+<!-- navigation button-->
+ <div class="nav" id="nav">
+    <img src="images/netflix-logo.png" alt="" class="nav__logo">
+    <img src="images/netflix-avatar.png" alt="" class="nav__avater">
+ </div>
+
         <div class="banner">
             <div class="banner__contents">
-                <h1 class="banner__Title">Money Heist</h1>
-                <div class="banner__button">
+                <h1 class="banner__Title">Money Heist</h1> <br>
+                <div>
+                    
                     <button class="banner__button">Play</button>
                     <button class="banner__button">My list</button>
                 </div>
                 <div class="banner__description">
                     to carry out the biggest heist in history, mysterious man named proffessor gathered
-                    seven robbers who has single character                  
+                    seven robbers who has single character   
+                    <div class="banner__fadebutton"></div>           
                 </div>
+                
             </div>
-        </div>
+            <div class="banner__fadebutton"></div> 
+        </div> <br>
+        <!--this is the netflix original-->
        <div class="row">
         <h2>NETFLIX ORIGINALS</h2>
         <div class="row__posters">
@@ -38,6 +49,8 @@
             <img src="images/large-movie8.jpg" alt=""class="row__poster row__posterlarge"/>
         </div>
        </div> 
+       <!-- this is the end of the netflix originals-->
+        <!--this trending option-->
        <div class="row">
         <h2>Trending Now</h2>
         <div class="row__posters">
@@ -59,6 +72,8 @@
             <img src="images/small-movie8.jpg" alt=""class="row__poster"/>
         </div>
        </div> 
+       <!--this  ending trending option-->
+       <!--this top rated option-->
        <div class="row">
         <h2>Top Rated</h2>
         <div class="row__posters">
@@ -80,6 +95,8 @@
             <img src="images/small-movie8.jpg" alt=""class="row__poster"/>
         </div>
        </div> 
+       <!--this ending of top rated option-->
+       <!--this action option-->
        <div class="row">
         <h2>Action Movies</h2>
         <div class="row__posters">
@@ -101,8 +118,9 @@
             <img src="images/small-movie8.jpg" alt=""class="row__poster"/>
         </div>
        </div> 
+       <!--this ending action option-->
         <div class="row">
-            <h2>Top Rated</h2>
+            <h2>Comedy</h2>
             <div class="row__posters">
                 <img src="images/small-movie1.jpg" alt=""class="row__poster"/>
                 <img src="images/small-movie2.jpg" alt=""class="row__poster"/>
@@ -184,6 +202,19 @@
             <img src="images/small-movie7.jpg" alt=""class="row__poster"/>
             <img src="images/small-movie8.jpg" alt=""class="row__poster"/>
         </div>
-       </div>  
+       </div>
+       
+
+       <script>
+         const nav = document.getElementById ( "nav");
+
+         window.addEventListener("scroll",() =>{
+            if(window.scrollY >=100) {
+                nav.classList.add("nav__black")
+            }else{
+                nav.classList.remove("nav__black")
+            }
+         })
+       </script>
     </body>
 </html>
